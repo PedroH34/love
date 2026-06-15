@@ -1,0 +1,36 @@
+COMO PERSONALIZAR
+
+1) Abra o arquivo index.html
+- Troque o título "Para o amor da minha vida"
+- Troque a carta na seção "minha cartinha"
+- Troque o link da música em:
+  href="https://www.youtube.com/"
+
+2) Trocar a data do contador
+Abra script.js e edite:
+const dataInicio = new Date(2024, 0, 1, 0, 0);
+
+Exemplo para 15/06/2023:
+const dataInicio = new Date(2023, 5, 15, 0, 0);
+
+Atenção: janeiro = 0, fevereiro = 1, março = 2...
+
+3) Trocar fotos
+Opção rápida:
+- Coloque suas fotos na mesma pasta do site com os nomes:
+  foto1.jpg, foto2.jpg, foto3.jpg...
+- No style.css, procure:
+  url("https://images.unsplash.com/...")
+- Troque por:
+  url("foto1.jpg")
+
+Para deixar cada card com uma foto diferente, me peça que eu adapto.
+
+4) Publicar no GitHub Pages
+- Crie um repositório no GitHub
+- Envie index.html, style.css e script.js
+- Vá em Settings > Pages
+- Source: Deploy from a branch
+- Branch: main
+- Folder: / root
+- Clique em Save
