@@ -364,4 +364,18 @@ footer {
   .contador-box {
     grid-template-columns: repeat(2, 1fr);
   }
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+button.btn {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+  
 }
