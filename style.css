@@ -377,5 +377,45 @@ button.btn {
   cursor: pointer;
   font-family: inherit;
 }
+.contador-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.contador-box div {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 22px;
+  padding: 20px;
+  text-align: center;
+}
+
+.contador-box strong {
+  display: block;
+  font-size: 48px;
+  color: #ffd2e2;
+  line-height: 1;
+}
+
+.contador-box span {
+  display: block;
+  margin-top: 8px;
+  color: #ffb4cf;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .contador-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contador-box strong {
+    font-size: 38px;
+  }
+}
   
 }
