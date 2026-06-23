@@ -108,4 +108,20 @@ function abrirSurpresa() {
   setTimeout(() => {
     conteudo.scrollIntoView({ behavior: "smooth" });
   }, 150);
+
+function abrirSurpresa() {
+
+  document.getElementById("btn-surpresa").style.display = "none";
+
+  document.getElementById("conteudo-surpresa").style.display = "block";
+
+  document.getElementById("rodape-surpresa").style.display = "block";
+
+  setTimeout(() => {
+    document.getElementById("conteudo-surpresa")
+      .scrollIntoView({
+        behavior: "smooth"
+      });
+  }, 300);
+}
 }
