@@ -168,7 +168,6 @@ main {
   background:
     linear-gradient(135deg, rgba(255,255,255,.14), rgba(255,255,255,.04)),
     url("foto1.jpg");
-    url("foto2.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
