@@ -94,3 +94,18 @@ if (event.key === "Escape") fecharModal();
 if (event.key === "ArrowRight") proximaFoto();
 if (event.key === "ArrowLeft") fotoAnterior();
 });
+
+function abrirSurpresa() {
+  const conteudo = document.getElementById("conteudo-surpresa");
+  const rodape = document.getElementById("rodape-surpresa");
+
+  conteudo.classList.remove("hidden");
+  conteudo.classList.add("show");
+
+  rodape.classList.remove("hidden");
+  rodape.classList.add("show");
+
+  setTimeout(() => {
+    conteudo.scrollIntoView({ behavior: "smooth" });
+  }, 150);
+}
