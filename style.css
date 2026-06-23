@@ -331,4 +331,37 @@ footer {
   .next {
     right: 10px;
   }
+  .contador-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.contador-box div {
+  padding: 18px 12px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.16);
+}
+
+.contador-box strong {
+  display: block;
+  font-size: clamp(28px, 5vw, 52px);
+  color: #fff;
+}
+
+.contador-box span {
+  display: block;
+  margin-top: 6px;
+  color: #ffb9d1;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 760px) {
+  .contador-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
