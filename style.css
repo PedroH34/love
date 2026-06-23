@@ -167,7 +167,8 @@ main {
   border: 1px dashed rgba(255,255,255,.28);
   background:
     linear-gradient(135deg, rgba(255,255,255,.14), rgba(255,255,255,.04)),
-    url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=900&q=80");
+    url("foto1.jpg");
+    url("foto2.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
