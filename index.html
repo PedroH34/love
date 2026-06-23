@@ -19,13 +19,12 @@
         Essa página guarda um pedacinho da nossa história, dos nossos momentos e de tudo que sinto por você.
       </p>
       <div class="actions">
-        <a href="#carta" class="btn primary">Abrir cartinha 💌</a>
-        <a href="#fotos" class="btn secondary">Ver memórias 📸</a>
+        <button class="btn primary" onclick="abrirSurpresa()">Abrir surpresa 💌</button>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="conteudo-surpresa" class="hidden">
     <section class="counter-card">
       <p class="section-label">nosso tempo juntos</p>
       <h2>Eu te amo há</h2>
@@ -94,12 +93,6 @@
 
 <section class="music-card">
   <p class="section-label">nossa música</p>
-  <h2>Uma música especial 🎵</h2>
-  <p>Coloque aqui uma música que lembra vocês.</p>
-
-  <div class="spotify">
-   <section class="music-card">
-  <p class="section-label">nossa música</p>
   <h2>Nossa música 🎵</h2>
 
   <iframe
@@ -111,20 +104,16 @@
     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
     loading="lazy">
   </iframe>
-
-</section>
-
-  </div>
 </section>
 ```
 
   </main>
 
-  <footer>
+  <footer id="rodape-surpresa" class="hidden">
     Feito com amor ❤️
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=5"></script>
 
 </body>
 </html>
