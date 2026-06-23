@@ -2,7 +2,7 @@
 // Formato: new Date(ANO, MÊS - 1, DIA, HORA, MINUTO)
 // Exemplo: 15/06/2023 = new Date(2023, 5, 15, 0, 0)
 
-const dataInicio = new Date(2026, 5, 1, 0, 0);
+const dataInicio = new Date(2026, 5, 1, 5, 0);
 
 function atualizarContador() {
 const contador = document.getElementById("contador");
