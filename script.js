@@ -1,6 +1,6 @@
-// ALTERE A DATA ABAIXO PARA A DATA DE INÍCIO DO RELACIONAMENTO
-// Formato: new Date(ANO, MÊS - 1, DIA, HORA, MINUTO)
-// Exemplo: 15/06/2023 = new Date(2023, 5, 15, 0, 0)
+// DATA DE INÍCIO DO RELACIONAMENTO
+// 01/05/2026 = new Date(2026, 4, 1, 0, 0)
+// Observação: no JavaScript, maio é 4 porque janeiro começa em 0.
 
 const dataInicio = new Date(2026, 4, 1, 0, 0);
 
@@ -13,7 +13,8 @@ const agora = new Date();
 let diff = agora - dataInicio;
 
 if (diff < 0) {
-contador.textContent = "A data configurada está no futuro.";
+contador.innerHTML = `       <div class="contador-box">         <div><strong>0</strong><span>Dias</span></div>         <div><strong>0</strong><span>Horas</span></div>         <div><strong>0</strong><span>Min</span></div>         <div><strong>0</strong><span>Seg</span></div>       </div>
+    `;
 return;
 }
 
@@ -28,21 +29,51 @@ diff -= minutos * (1000 * 60);
 
 const segundos = Math.floor(diff / 1000);
 
-contador.innerHTML = `     <div class="contador-box">       <div><strong>${dias}</strong><span>dias</span></div>       <div><strong>${horas}</strong><span>horas</span></div>       <div><strong>${minutos}</strong><span>min</span></div>       <div><strong>${segundos}</strong><span>seg</span></div>     </div>
+contador.innerHTML = `     <div class="contador-box">       <div><strong>${dias}</strong><span>Dias</span></div>       <div><strong>${horas}</strong><span>Horas</span></div>       <div><strong>${minutos}</strong><span>Min</span></div>       <div><strong>${segundos}</strong><span>Seg</span></div>     </div>
   `;
 }
 
 setInterval(atualizarContador, 1000);
 atualizarContador();
 
-/* MODAL DA GALERIA */
+function abrirSurpresa() {
+const conteudo = document.getElementById("conteudo-surpresa");
+const rodape = document.getElementById("rodape-surpresa");
+const botao = document.getElementById("btn-surpresa");
+
+if (!conteudo) {
+alert("Erro: conteúdo da surpresa não encontrado.");
+return;
+}
+
+if (botao) {
+botao.style.display = "none";
+}
+
+conteudo.style.display = "block";
+
+if (rodape) {
+rodape.style.display = "block";
+}
+
+setTimeout(() => {
+conteudo.scrollIntoView({
+behavior: "smooth"
+});
+}, 250);
+}
+
+// GALERIA COM FOTO AMPLIADA
 
 const fotos = Array.from(document.querySelectorAll(".photo img"));
 let fotoAtual = 0;
 
+if (fotos.length > 0) {
 const modal = document.createElement("div");
 modal.className = "modal";
-modal.innerHTML = `  <button class="modal-btn close" aria-label="Fechar">×</button>   <button class="modal-btn prev" aria-label="Foto anterior">‹</button>   <img src="" alt="Foto ampliada">   <button class="modal-btn next" aria-label="Próxima foto">›</button>`;
+
+modal.innerHTML = `     <button class="modal-btn close" aria-label="Fechar">×</button>     <button class="modal-btn prev" aria-label="Foto anterior">‹</button>     <img src="" alt="Foto ampliada">     <button class="modal-btn next" aria-label="Próxima foto">›</button>
+  `;
 
 document.body.appendChild(modal);
 
@@ -90,38 +121,11 @@ fecharModal();
 document.addEventListener("keydown", (event) => {
 if (!modal.classList.contains("active")) return;
 
+```
 if (event.key === "Escape") fecharModal();
 if (event.key === "ArrowRight") proximaFoto();
 if (event.key === "ArrowLeft") fotoAnterior();
+```
+
 });
-
-function abrirSurpresa() {
-  const conteudo = document.getElementById("conteudo-surpresa");
-  const rodape = document.getElementById("rodape-surpresa");
-
-  conteudo.classList.remove("hidden");
-  conteudo.classList.add("show");
-
-  rodape.classList.remove("hidden");
-  rodape.classList.add("show");
-
-  setTimeout(() => {
-    conteudo.scrollIntoView({ behavior: "smooth" });
-  }, 150);
-
-function abrirSurpresa() {
-
-  document.getElementById("btn-surpresa").style.display = "none";
-
-  document.getElementById("conteudo-surpresa").style.display = "block";
-
-  document.getElementById("rodape-surpresa").style.display = "block";
-
-  setTimeout(() => {
-    document.getElementById("conteudo-surpresa")
-      .scrollIntoView({
-        behavior: "smooth"
-      });
-  }, 300);
-}
 }
